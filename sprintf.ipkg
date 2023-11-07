@@ -1,0 +1,6 @@
+package sprintf
+
+pkgs = specdris
+modules = Sprintf, SprintfSpec
+tests = SprintfSpec.specSuite
+main = Sprintf
