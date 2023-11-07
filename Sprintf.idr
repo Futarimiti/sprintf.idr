@@ -31,7 +31,7 @@ corresArgs (PReg x :: xs) = corresArgs xs
 -- convert a list of types to printf function type
 -- example: [Int, Double, Char] -> (Int -> Double -> Char -> List Char)
 --          [] -> (List Char)  -- no args
-typeListToFunc: Type -> List Type -> Type
+typeListToFunc : Type -> List Type -> Type
 typeListToFunc ending lst = case lst of
                                  [] => ending
                                  (x :: xs) => x -> typeListToFunc ending xs
