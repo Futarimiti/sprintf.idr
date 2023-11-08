@@ -1,6 +1,7 @@
+-- https://www.codewars.com/kata/5c7fe5c859036f142eccaabb
 module Sprintf
 
-%access export
+%access public export
 %default total
 
 data Printf = PPercent
@@ -23,7 +24,7 @@ toPrintf (x :: xs) = PReg x :: toPrintf xs
 corresArgs : List Printf -> List Type
 corresArgs [] = []
 corresArgs (PPercent :: xs) = corresArgs xs
-corresArgs (PInteger :: xs) = Int :: corresArgs xs
+corresArgs (PInteger :: xs) = Integer :: corresArgs xs
 corresArgs (PDouble :: xs) = Double :: corresArgs xs
 corresArgs (PChar :: xs) = Char :: corresArgs xs
 corresArgs (PReg x :: xs) = corresArgs xs
